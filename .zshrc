@@ -7,7 +7,16 @@ alias 'gl'='git log'
 alias 'gd'='git diff'
 alias 'encrypt'='gpg -c '
 alias 'decrypt'='gpg -d '
-alias 'help'='echo "todo: show todos\nkillallcontainers: kill all docker containers\nrpi: ssh into RPI (static entry in /etc/hosts\nshowpiip: show rpi static entry in /etc/hosts\ngs: git status\nga: git add .\ngc \"<msg>\": git commit -m \"<msg>\"\ngl: git log\ngd: git diff\nencrypt <filepath>: symmetrically encrypt file, will prompt for passphrase\ndecrypt <filepath>: symmertrically decrypt file, will prompt for passphrase\ns3list: list contents of <env>S3PERSONALSTORAGEBUCKEPATH\ns3get <filename>: download file from bucket <env>S3PERSONALSTORAGEBUCKEPATH\ns3upload <filepath>: upload file to bucket <env>S3PERSONALSTORAGEBUCKEPATH\ns3delete <filename>: delete file from bucket <env>S3PERSONALSTORAGEBUCKEPATH\nsto <path/to/dir|filename|>: get disk space taken up by <arg> and each file within dir"  | column -s : -t'
+alias 'help'='echo "todo: show todos\nkillallcontainers: kill all docker containers\n\
+rpi: ssh into RPI (static entry in /etc/hosts\nshowpiip: show rpi static entry in /etc/hosts\n\
+gs: git status\nga: git add .\ngc \"<msg>\": git commit -m \"<msg>\"\ngl: git log\ngd: git diff\n\
+encrypt <filepath>: symmetrically encrypt file, will prompt for passphrase\n\
+decrypt <filepath>: symmertrically decrypt file, will prompt for passphrase\n\
+s3list: list contents of <env>S3PERSONALSTORAGEBUCKEPATH\n\
+s3get <filename>: download file from bucket <env>S3PERSONALSTORAGEBUCKEPATH\n\
+s3upload <filepath>: upload file to bucket <env>S3PERSONALSTORAGEBUCKEPATH\n\
+s3delete <filename>: delete file from bucket <env>S3PERSONALSTORAGEBUCKEPATH\n\
+sto <path/to/dir|filename|>: get disk space taken up by <arg> and each file within dir"  | column -s : -t'
 
 export S3PERSONALSTORAGEBUCKETPATH=
 export S3PERSONALSTORAGEIAMKEY=
