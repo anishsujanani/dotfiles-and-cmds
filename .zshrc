@@ -1,5 +1,4 @@
 alias 'todo'='grep --color=auto -nri todo ~/Desktop ~/Documents ~/Projects'
-alias 'killallcontainers'='for i in $(docker container ls -qa); do docker container rm $i; done'
 alias 'rpi'='ssh pi@rpi'
 alias 'gs'='git status'
 alias 'ga'='git add .'
