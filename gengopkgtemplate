@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Script that automates the directory creation,
+# go mod intialization and go.mod edits (for local dev)
+# - Anish Sujanani, December 2022
+
 if [ "$#" -ne 1 ]; then
 	echo "Usage: gengopkgtemplate </path/to/my_lib> | <my_lib>"
 	exit

@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Script that outputs disk space taken up by files
+# and dirs in current dir or in path as arg
+# Anish Sujanani, December 2022
+
 d=$1
 
 if [ "$#" -ne 1 ]; then

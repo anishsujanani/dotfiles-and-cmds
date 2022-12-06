@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Script that kills all containers
+# Anish Sujanani, December 2022
+
 for i in $(docker container ls -qa); do 
 	docker container rm $i; 
 done
