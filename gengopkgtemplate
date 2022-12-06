@@ -17,7 +17,6 @@ filepath=$(dirname $1)
 libname=$(basename $1)
 mkdir -p $filepath/$libname/{$libname,stub}
 
-
 # generate library code
 cd $filepath/$libname/$libname
 go mod init github.com/anishsujanani/$libname
