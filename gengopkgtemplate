@@ -1,0 +1,60 @@
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+	echo "Usage: gengopkgtemplate </path/to/my_lib> | <my_lib>"
+	exit
+fi
+
+# structure:
+# my_lib/
+#  - my_lib/
+#  - stub/
+
+orig_dir=$PWD
+
+# create dir structure
+filepath=$(dirname $1)
+libname=$(basename $1)
+mkdir -p $filepath/$libname/{$libname,stub}
+
+
+# generate library code
+cd $filepath/$libname/$libname
+go mod init github.com/anishsujanani/$libname
+
+cat > $libname.go << EOF
+package $libname
+
+import (
+	"fmt"
+)
+
+func Libmain() {
+	fmt.Println("Library $libname imported, start development")
+}
+EOF
+
+cd $orig_dir
+
+# generate stub code and point to local lib
+cd $filepath/$libname/stub
+
+go mod init github.com/anishsujanani/stub
+
+cat > main.go << EOF
+package main
+
+import (
+	"github.com/anishsujanani/$libname"
+)
+
+func main() {
+	$libname.Libmain()
+}
+EOF
+
+go mod edit -replace github.com/anishsujanani/$libname=../$libname
+go mod tidy
+
+echo "Running stub now..."
+go run .
