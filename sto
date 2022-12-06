@@ -1,0 +1,8 @@
+#!/bin/bash
+
+d=$1
+if [ "$#" -ne 1 ]; then
+	d="."
+fi
+
+du -d 1 -h $(readlink -f $d) | sort -r -h | column -t
