@@ -25,8 +25,10 @@ export S3PERSONALSTORAGECLIPROFILE=
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 autoload -U colors && colors
-PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}
-$ "
+#PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}
+
+PS1="%{$fg[yellow]%}%~ %{$reset_color%}
+> "
 export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/bin
