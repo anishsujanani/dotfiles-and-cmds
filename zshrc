@@ -24,7 +24,8 @@ s3upload <filepath>: upload file to bucket <env>S3PERSONALSTORAGEBUCKEPATH\n\
 s3delete <filename>: delete file from bucket <env>S3PERSONALSTORAGEBUCKEPATH\n\
 sto <path/to/dir|filename|>: get disk space taken up by <arg> and each file within dir\n\
 ggpt <path/to/lib_name>: generates boilerplate for Go library development\n\
-pypher: run Pypher in a docker container"  | column -s : -t'
+pypher: run Pypher in a docker container\n\
+bored: get an activity from the boredAPI"  | column -s : -t'
 
 export S3PERSONALSTORAGEBUCKETPATH=
 export S3PERSONALSTORAGEIAMKEY=
