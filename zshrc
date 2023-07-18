@@ -1,7 +1,7 @@
 alias 'editzsh'='vi ~/.zshrc'
 alias 'srczsh'='source ~/.zshrc'
 alias 'todo'='grep --color=auto -nri todo ~/Desktop ~/Documents ~/Downloads ~/Projects'
-alias 'rpi'='ssh pi@rpi'
+alias 'rpi'='ssh pi@rpi -i <path/to/keyfile>'
 alias 'showpiip'='cat /etc/hosts'
 alias 'gs'='git status'
 alias 'ga'='git add '
@@ -11,6 +11,7 @@ alias 'gd'='git diff'
 alias 'encrypt'='gpg -c '
 alias 'decrypt'='gpg -d '
 alias 'pypher'='docker run -it --rm pypher'
+alias 'twtxt'='twtxt -c ~/.config/twtxt/config'
 alias 'help'='echo "editzsh: edit ~/.zshrc in vi\n\
 srczsh: source ~/.zshrc\n\
 todo: show todos\nkillallcontainers: kill all docker containers\n\
@@ -25,7 +26,8 @@ s3delete <filename>: delete file from bucket <env>S3PERSONALSTORAGEBUCKEPATH\n\
 sto <path/to/dir|filename|>: get disk space taken up by <arg> and each file within dir\n\
 ggpt <path/to/lib_name>: generates boilerplate for Go library development\n\
 pypher: run Pypher in a docker container\n\
-bored: get an activity from the boredAPI"  | column -s : -t'
+bored: get an activity from the boredAPI\n\
+twtxt: alias for twtxt -c ~/.config/twtxt/config\n" | column -s : -t'
 
 export S3PERSONALSTORAGEBUCKETPATH=
 export S3PERSONALSTORAGEIAMKEY=
