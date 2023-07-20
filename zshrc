@@ -1,3 +1,5 @@
+alias 'sed'='gsed'
+
 alias 'editzsh'='vi ~/.zshrc'
 alias 'srczsh'='source ~/.zshrc'
 alias 'todo'='grep --color=auto -nri todo ~/Desktop ~/Documents ~/Downloads ~/Projects'
@@ -27,7 +29,8 @@ sto <path/to/dir|filename|>: get disk space taken up by <arg> and each file with
 ggpt <path/to/lib_name>: generates boilerplate for Go library development\n\
 pypher: run Pypher in a docker container\n\
 bored: get an activity from the boredAPI\n\
-twtxt: alias for twtxt -c ~/.config/twtxt/config\n" | column -s : -t'
+twtxt: alias for twtxt -c ~/.config/twtxt/config\n
+2do: command-line todo"| column -s : -t' 
 
 export S3PERSONALSTORAGEBUCKETPATH=
 export S3PERSONALSTORAGEIAMKEY=
